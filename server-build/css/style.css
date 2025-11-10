@@ -1,0 +1,293 @@
+/* ====== BASE RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+/* ====== PRELOADER ====== */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fa;
+}
+
+.sk-rotating-plane {
+  width: 50px;
+  height: 50px;
+  background-color: #1a1a1a;
+  animation: sk-rotatePlane 1.2s infinite ease-in-out;
+}
+
+@keyframes sk-rotatePlane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+/* ====== HEADER ====== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  background-color: #1a1a1a;
+  color: #f8f9fa;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.col-1,
+.col-2,
+.col-3 {
+  display: flex;
+  align-items: center;
+}
+
+.col-1 {
+  flex: 0 0 120px;
+  justify-content: flex-start;
+}
+
+.col-2 {
+  flex: 1;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+}
+
+.col-2 p {
+  font-size: 1em;
+  line-height: 1.2;
+  color: white;
+  margin: 4px 0;
+}
+
+.col-2 .title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.col-3 {
+  justify-content: flex-end;
+}
+
+.logo {
+  width: auto;
+  height: 45px;
+  object-fit: contain;
+  margin: 4px 0;
+}
+
+.logo-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ====== HAMBURGER ICON FIX ====== */
+#hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hamburger img,
+#hamburger svg {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: invert(1); /* makes dark SVG appear white on dark header */
+  transition: transform 0.2s ease;
+}
+
+#hamburger:hover img,
+#hamburger:hover svg {
+  transform: scale(1.1);
+}
+
+/* For Font Awesome option */
+#hamburger i {
+  font-size: 26px;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+#hamburger:hover i {
+  transform: scale(1.1);
+}
+
+/* ====== NAVIGATION ====== */
+.header-main nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+  background-color: #111;
+  flex-direction: column;
+}
+
+.header-main nav ul.show {
+  max-height: 500px;
+}
+
+nav ul li {
+  padding: 0 20px;
+  text-align: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00BFFF;
+}
+
+.new {
+  font-size: 0.8em;
+  color: #ff5e5e;
+}
+
+/* ====== DESKTOP NAV ====== */
+@media (min-width: 769px) {
+  #hamburger {
+    display: none;
+  }
+
+  .header-main nav ul {
+    display: flex !important;
+    flex-direction: row;
+    max-height: none;
+  }
+
+  nav ul li {
+    padding: 10px 15px;
+  }
+
+  #aicte-logo-mb {
+    display: none;
+  }
+  #aicte-logo-lg {
+    margin-right: 2rem;
+  }
+}
+
+/* ====== MOBILE HEADER ====== */
+@media (max-width: 768px) {
+  .header-top {
+    padding: 8px 15px;
+  }
+
+  .col-1 {
+    flex: 0 0 50px;
+  }
+
+  .logo-stack {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+    max-height: 40px;
+  }
+
+  .col-2 p {
+    font-size: 0.65em;
+  }
+
+  .col-2 .title {
+    font-size: 0.85em;
+  }
+
+  .col-3 {
+    margin: 0 8px;
+  }
+
+  #aicte-logo-lg {
+    display: none;
+  }
+  #aicte-logo-mb {
+    display: block;
+  }
+
+  #hamburger {
+    display: flex;
+  }
+}
+
+/* ====== MAIN CONTENT ====== */
+main {
+  padding-top: 120px;
+  min-height: 80vh;
+  background-color: #f8f9fa;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background-color: #1a1a1a;
+  color: #f8f9fa;
+  text-align: center;
+  padding: 20px;
+  margin-top: 120px;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+footer .socials img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+#chrome-logo { scale: 2; }
