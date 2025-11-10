@@ -1189,7 +1189,6 @@ footer .socials img {
 .committee-tabs {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 12px;
   list-style: none;
   padding: 0;
@@ -1286,5 +1285,101 @@ footer .socials img {
 @media (max-width: 500px) {
   .committee-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ===== ABOUT SVCE SECTION ===== */
+.about-section {
+  background-image: url('../assets/images/about-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 5%;
+  color: #f8f9fa;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-section .section-title {
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* ===== ABOUT DEPARTMENT SECTION ===== */
+.about-dept-section {
+  padding: 60px 5%;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+}
+
+.about-dept-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-text h3 {
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #000;
+  text-align: justify;
+}
+
+/* Image */
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-section {
+    padding: 80px 20px;
+  }
+
+  .about-dept-section {
+    padding: 80px 20px;
+  }
+
+  .about-text h3 {
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 100%;
   }
 }
