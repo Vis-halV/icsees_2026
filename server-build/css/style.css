@@ -743,3 +743,111 @@ footer .socials img {
     padding: 10px 20px;
   }
 }
+
+
+/* ====== IMPORTANT DATES SECTION ====== */
+.important-dates-section {
+  background: #1a1a1a; 
+  padding: 80px 5%;
+  text-align: center;
+  color: #f5f5f5;
+}
+
+.important-dates-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Section Title */
+.section-title {
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  letter-spacing: 0.5px;
+}
+
+/* Dates Grid */
+.dates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  margin-bottom: 3rem;
+}
+
+/* Date Card */
+.date-card {
+  background: #333; /* slightly lighter dark for contrast */
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  color: #e2e2e2;
+}
+
+.date-card:hover {
+  transform: scale(1.05);
+}
+
+.date-card i {
+  font-size: 2.5rem;
+  color: #00b4ff;
+  margin-bottom: 15px;
+}
+
+.date-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.date-card p {
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+/* Conference Date */
+.conference-title {
+  font-size: clamp(1.6rem, 2.3vw, 2rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 40px;
+  line-height: 1.5;
+}
+
+.conference-title span {
+  color: orange;
+  font-weight: 700;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .section-title {
+    margin-bottom: 2rem;
+  }
+
+  .date-card {
+    padding: 25px 15px;
+  }
+
+  .date-card i {
+    font-size: 2rem;
+  }
+
+  .date-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .date-card p {
+    font-size: 0.95rem;
+  }
+}
+
+.date-card .icon {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 15px;
+  filter: invert(48%) sepia(85%) saturate(4043%) hue-rotate(186deg) brightness(95%) contrast(92%);
+}
