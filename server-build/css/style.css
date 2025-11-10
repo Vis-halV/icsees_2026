@@ -1168,3 +1168,123 @@ footer .socials img {
   list-style: none;
   padding-left: 0;
 }
+
+/* ===== COMMITTEE SECTION ===== */
+.committee-section {
+  background: #f9f9f9;
+  padding: 70px 5%;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+/* ===== Section Title ===== */
+.section-title h2 {
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 25px;
+}
+
+/* ===== Tabs ===== */
+.committee-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.committee-tabs li {
+  background: #fff;
+  color: #111;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.committee-tabs li:hover {
+  background: #f0f0f0;
+}
+
+.committee-tabs li.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* ===== Members Grid ===== */
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
+
+/* ===== Member Card (Compact) ===== */
+.committee-member {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 14px 12px; /* reduced padding */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.committee-member:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.member-name {
+  font-size: 0.95rem; /* smaller text */
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 3px;
+}
+
+.member-role {
+  color: #555;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* ===== Responsive Tweaks ===== */
+@media (max-width: 768px) {
+  .committee-tabs {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .committee-tabs li {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .committee-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .committee-member {
+    padding: 10px 8px;
+  }
+
+  .member-name {
+    font-size: 0.9rem;
+  }
+
+  .member-role {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .committee-grid {
+    grid-template-columns: 1fr;
+  }
+}
