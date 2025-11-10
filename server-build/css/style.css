@@ -462,7 +462,7 @@ footer .socials img {
 /* ====== OVERVIEW SECTION ====== */
 .overview-section {
   background: #f8f9fa;
-  padding: 80px 5%;
+  padding: 60px 5% 0 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -546,5 +546,124 @@ footer .socials img {
 
   .overview-image img {
     border-radius: 8px;
+  }
+}
+
+/* ====== RESEARCH DOMAINS SECTION (CARD STYLE) ====== */
+.parallax-section {
+  background: #f8f9fa;
+  padding: 80px 5%;
+}
+
+.parallax-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.parallax-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.parallax-section .col {
+  flex: 1;
+  padding: 20px;
+}
+
+.image-col img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+.text-col h2 {
+  font-size: clamp(1.8rem, 2.8vw, 2.2rem);
+  color: #004aad;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.text-col h3 {
+  font-size: clamp(1rem, 1.8vw, 1.1rem);
+  color: #333;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Container for all domain cards */
+.PS {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.overview-p { font-weight: normal;}
+
+/* Each domain card */
+.domain-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 5px solid #004aad;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover lift effect */
+.domain-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Domain title */
+.domain-card h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #004aad;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Subtopics section */
+.subtopic {
+  margin-bottom: 20px;
+}
+
+.subtopic h3 {
+  font-size: 1.05rem;
+  color: #111;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Bullet list */
+.subtopic ul {
+  list-style: disc;
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+.subtopic ul li {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* ===== Responsive Layout ===== */
+@media (max-width: 992px) {
+  .PS {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .PS {
+    grid-template-columns: 1fr;
   }
 }
