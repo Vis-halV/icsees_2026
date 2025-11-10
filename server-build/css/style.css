@@ -667,3 +667,79 @@ footer .socials img {
     grid-template-columns: 1fr;
   }
 }
+
+/* ====== JOURNAL PUBLICATION SECTION ====== */
+.journal-section {
+  padding: 60px 5%;
+}
+
+.journal-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.journal-title {
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  color: #004aad;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.journal-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 40px 30px;
+  text-align: left;
+  border: 1px solid #e2e2e2; /* soft boundary for structure */
+}
+
+.journal-desc {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.download-section p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* ===== Button Styling ===== */
+.download-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #d9534f;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #c9302c;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+  .journal-card {
+    padding: 25px 15px;
+  }
+
+  .journal-title {
+    font-size: 1.6rem;
+  }
+
+  .journal-desc {
+    font-size: 0.95rem;
+  }
+
+  .download-btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}
